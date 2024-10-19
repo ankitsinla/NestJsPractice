@@ -23,9 +23,6 @@ export class ConfigService extends NestConfigService {
 		// process.env =
 
 		this.configs = ConfigService.validateInput(envConfigs);
-
-		console.log("conog", this.configs);
-		console.log(this.get("DB_HOST"));
 	}
 
 	private static validateInput(envConfig: EnvConfig): EnvConfig {

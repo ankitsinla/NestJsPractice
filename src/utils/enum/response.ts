@@ -8,5 +8,6 @@ export class Response {
 }
 
 export const ResponseData = {
-	SUCCESS: new Response(0, "Success")
+	SUCCESS: new Response(0, "Success"),
+	UNKNOWN_ERROR_OCCURRED: new Response(1, "Something went wrong ! Please try after some time.")
 };
