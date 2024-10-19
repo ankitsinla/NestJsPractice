@@ -1,11 +1,10 @@
-import { Injectable, Logger } from "@nestjs/common";
+import { Logger } from "@nestjs/common";
 import { ConfigService as NestConfigService } from "@nestjs/config";
 import { resolve } from "path";
 import * as fs from "fs";
 import { parse } from "dotenv";
 import { EnvConfig, envSchema } from "./validation.types";
 
-@Injectable()
 export class ConfigService extends NestConfigService {
 	private readonly Logger = new Logger(ConfigService.name);
 

@@ -4,7 +4,6 @@ import { environments } from "./environments";
 
 @Global()
 @Module({
-	controllers: [],
 	providers: [
 		{
 			provide: ConfigService,
