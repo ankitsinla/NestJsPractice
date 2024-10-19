@@ -1,17 +1,17 @@
 import * as joi from "joi";
 
 export interface EnvConfig {
-	// ENV: string;
-	// PORT: number;
-	// CONTEXT: string;
-	// ORIGINS: string;
-	// ALLOWED_HEADERS: string;
-	// ALLOWED_METHODS: string;
-	// CORS_ENABLED: boolean;
-	// CORS_CREDENTIALS: boolean;
+	ENV: string;
+	PORT: number;
+	CONTEXT: string;
+	ORIGINS: string;
+	ALLOWED_HEADERS: string;
+	ALLOWED_METHODS: string;
+	CORS_ENABLED: boolean;
+	CORS_CREDENTIALS: boolean;
 
-	// WRITE_LOG: boolean;
-	// MINIMUM_LOG_LEVEL: string;
+	WRITE_LOG: boolean;
+	MINIMUM_LOG_LEVEL: string;
 
 	// SWAGGER_PATH: string;
 	// SWAGGER_ENABLED: boolean;
@@ -27,17 +27,17 @@ export interface EnvConfig {
 }
 
 export const envSchema: joi.ObjectSchema<EnvConfig> = joi.object({
-	// ENV: joi.string().required().default("dev"),
-	// PORT: joi.number(),
-	// CONTEXT: joi.string().empty("").default(`v1.0`),
-	// ORIGINS: joi.string().default("*"),
-	// ALLOWED_HEADERS: joi.string(),
-	// ALLOWED_METHODS: joi.string(),
-	// CORS_ENABLED: joi.boolean(),
-	// CORS_CREDENTIALS: joi.boolean(),
+	ENV: joi.string().required().default("dev"),
+	PORT: joi.number(),
+	CONTEXT: joi.string().empty("").default(`v1.0`),
+	ORIGINS: joi.string().default("*"),
+	ALLOWED_HEADERS: joi.string(),
+	ALLOWED_METHODS: joi.string(),
+	CORS_ENABLED: joi.boolean(),
+	CORS_CREDENTIALS: joi.boolean(),
 
-	// WRITE_LOG: joi.boolean(),
-	// MINIMUM_LOG_LEVEL: joi.string(),
+	WRITE_LOG: joi.boolean(),
+	MINIMUM_LOG_LEVEL: joi.string(),
 
 	// SWAGGER_PATH: joi.string(),
 	// SWAGGER_ENABLED: joi.boolean(),

@@ -4,6 +4,7 @@ import * as winston from "winston";
 
 import * as fs from "fs";
 import * as path from "path";
+import { AppLoggerService } from "./logger.service";
 
 // Ensure the log directory exists
 const logDir = "log";
@@ -28,6 +29,8 @@ const logFilename = path.join(logDir, `${currentDate}.log`);
 				})
 			]
 		})
-	]
+	],
+	providers: [AppLoggerService],
+	exports: [AppLoggerService]
 })
 export class LoggerModule {}
